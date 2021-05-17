@@ -9,12 +9,32 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var questions = [
+      'What\'s your favourite color?',
+      'What\'s your fvourite animal?',
+    ];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text('Quiz App'),
         ),
-        body: Text('This is my body'),
+        body: Column(
+          children: [
+            Text('The question!'),
+            RaisedButton(
+              onPressed: null,
+              child: Text('Answer 1'),
+            ),
+            RaisedButton(
+              onPressed: null,
+              child: Text('Answer 2'),
+            ),
+            RaisedButton(
+              onPressed: null,
+              child: Text('Answer 3'),
+            ),
+          ],
+        ),
       ),
     );
   }
